@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manejo de DOM con JavaScript</title>
+</head>
+<body>
+    <!--
+        En JavaScript cuando estamos trabajando con los elementos HTML,
+        se utiliza la palabra "on", para especificar un evento.
+    -->
+
+    <!--
+        En los eventos no necesariamente tiene que mandar a llamar una funcion de 
+        JavaScript, sin embargo, podemos tener directamente el codigo de JavaScript
+
+        Pero como estamos trabajando dentro de cierto elemento HTML, entonces se crea
+        un objeto de ese mismo tipo.
+
+        Por ejemplo en este caso, estamos trbajando con el elemento HTML "h1", por lo tanto
+        se crea un objeto de tipo h1, accedemos  a el mediante el operador THIS.
+
+        Recordemos que el apuntador THIS, esta apuntando al objeto/elemento HTML que se esta
+        ejecutando en este momento.
+
+        Los eventos, ocurren directamente sobre los elementos HTML, en este caso, 
+        damos clic directamente sobre el titulo.
+    -->
+    <h1 onclick="cambiarTexto(this)">Manejo de DOM con JavaScript</h1>
+    <br/>
+    <script>
+        function cambiarTexto(titulo) {
+            console.log("Elemento: "+titulo);
+            console.log(titulo.innerHTML);
+            titulo.innerHTML = 'Cambiamos el titulo';
+        }
+    </script>
+</body>
+</html>
