@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos OnMouseOver y OnMouseOut</title>
+</head>
+<body>
+    <h1 id="titulo" onmouseover="rojo()" onmouseout="azul()">Eventos OnMouseOver y OnMouseOut</h1>
+    <br/>
+    <!-- 
+        OnMouseOver: Cuando pasamos el cursor sobre un elemnto.
+        OnMouseOut: Cuando retirarmos el curso del elemento.
+    -->
+    <script>
+        function rojo () {
+            const titulo = document.getElementById("titulo");
+            titulo.style.color = "red";
+        }
+
+        function azul () {
+            const titulo = document.getElementById("titulo");
+            titulo.style.color = "blue";
+        }
+    </script>
+</body>
+</html>
